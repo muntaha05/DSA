@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 void insertion_sort(int list[],int N)
 {
     int temp[100];
@@ -17,9 +19,18 @@ void insertion_sort(int list[],int N)
 }
 int main()
 {
-    int list[]={2,5,3,6,7};
-    int size=sizeof(list)/4;
-    insertion_sort(list,size);
-    for(int i=0;i<size;i++)
+    int N=500;  
+    int list[N];
+
+    
+    for(int i=0;i<N;i++)
+    {
+        list[i]=rand()%N;
+    }
+    insertion_sort(list,N);
+    for(int i=0;i<N;i++)
     printf("%d ",list[i]);
+     int ticks=clock();
+    printf("\nexecution time %f",(float)ticks/CLOCKS_PER_SEC);
+    return 0;
 }

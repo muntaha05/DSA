@@ -28,7 +28,7 @@ int main()
 
 }
 
-void Mergesort(int list[],int templist[],int N)    //create f1
+void Mergesort(int list[],int templist[],int N)    //create f1-there will be no prb if we dont use this func
 {
    Msort(list,templist,0,N-1);
     for(int i=0;i<N;i++)

@@ -16,7 +16,7 @@ int main()
     int N=5000;
     for(int i=0;i<N;i++)
     {
-        list[i]=rand()%500;
+        list[i]=rand()%N;
     }
     Mergesort(list,templist,N);
     /*end=time(NULL);
